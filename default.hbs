@@ -13,9 +13,13 @@
     <meta name="description" content="{{meta_description}}" />
 
     <!-- CSS -->
+    <link rel="stylesheet" href="{{asset "css/bootstrap.css"}}">
+    <link rel="stylesheet" href="{{asset "css/font-awesome.css"}}">
+    <link rel="stylesheet" href="{{asset "css/bootstrap-social.css"}}">
     <link rel="stylesheet" href="{{asset "css/poole.css"}}">
     <link rel="stylesheet" href="{{asset "css/syntax.css"}}">
     <link rel="stylesheet" href="{{asset "css/lanyon.css"}}">
+    <link rel="stylesheet" href="{{asset "css/style.css"}}">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
 
     <!-- Icons -->
@@ -26,35 +30,9 @@
     {{ghost_head}}
   </head>
 
-  <body class="{{body_class}}">
+  <body class="{{body_class}} sidebar-overlay">
 
-    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
-     styles, `#sidebar-checkbox` for behavior. -->
-    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
-
-    <!-- Toggleable sidebar -->
-    <div class="sidebar" id="sidebar">
-      <div class="sidebar-item">
-        <p>{{@blog.description}}</p>
-      </div>
-
-      <nav class="sidebar-nav">
-        <a class="sidebar-nav-item" href="{{@blog.url}}">Home</a>
-
-        {{! The code below dynamically generates a sidebar nav of posts tagged as static pages. }}
-        {{#foreach posts}}
-          {{#has tag="page"}}
-            <a class="sidebar-nav-item" href="{{ url }}">{{ title }}</a>
-          {{/has}}
-        {{/foreach}}
-      </nav>
-
-      <div class="sidebar-item">
-        <p>
-          &copy; {{date format="YYYY"}}. All rights reserved.
-        </p>
-      </div>
-    </div>
+    {{> "sidebar"}}
 
     <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
          content to avoid any CSS collisions with our real content. -->

@@ -608,10 +608,6 @@ a.pagination-item:hover {
     text-decoration: none;
 }
 
-.post-footer h4 a:hover {
-    text-decoration: underline;
-}
-
 .tag-head.main-header {
     height: 40%;
     min-height: 180px;
