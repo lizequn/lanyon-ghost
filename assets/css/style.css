@@ -2,11 +2,12 @@
 
 p, ul, li {
   font-family: 'Avenir','Helvetica','Avenir','Arial', sans-serif;
+  color: #4d4d4d;
 }
 
 /* No `:visited` state is required by default (browsers will use `a`) */
 a {
-  color: #333;  /*#268bd2;*/
+  color: #4d4d4d;
   text-decoration: none;
   border-bottom: 2px solid #e1e1e1;
 }
@@ -16,7 +17,12 @@ a strong {
 /* `:focus` is linked to `:hover` for basic accessibility */
 a:hover,
 a:focus {
+  color: #000;
   border-bottom-color: #d28445;
+}
+
+a.blog-title {
+  border-bottom: none;
 }
 
 .img {
@@ -26,12 +32,40 @@ a:focus {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat','Helvetica','Avenir','Arial', sans-serif;
   font-weight: 500;
+
+}
+
+h1 {
+  font-size: 2rem;
   color: #d28445;
+}
+h2 {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+h3 {
+  margin-top: 1.5rem;
+  font-size: 1.125rem;
+}
+h4, h5, h6 {
+  margin-top: 1rem;
+  font-size: 1rem;
 }
 
 .page-title,
 .post-title,
 .post-title a {
+  color: #d28445;
+}
+
+.post-title-index,
+.post-title-index a {
+  color: black;
+  border-bottom: none;
+}
+
+.post-title-index,
+.post-title-index a:hover {
   color: #d28445;
 }
 
