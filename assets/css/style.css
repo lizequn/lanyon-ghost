@@ -21,6 +21,17 @@ a:focus {
   border-bottom-color: #d28445;
 }
 
+a:link, a:visited, a:hover, a:active {
+  transition-property: all;
+  transition-duration: .2s;
+  -webkit-transition-timing-function: cubic-bezier(0.165, 0.630, 0.140, 0.820);
+  -moz-transition-timing-function: cubic-bezier(0.165, 0.630, 0.140, 0.820);
+  -ms-transition-timing-function: cubic-bezier(0.165, 0.630, 0.140, 0.820);
+  -o-transition-timing-function: cubic-bezier(0.165, 0.630, 0.140, 0.820);
+  transition-timing-function: cubic-bezier(0.165, 0.630, 0.140, 0.820);
+  -webkit-font-smoothing: antialiased
+}
+
 a.blog-title {
   border-bottom: none;
 }
@@ -64,7 +75,7 @@ blockquote p {
 .page-title,
 .post-title,
 .post-title a {
-  color: #d28445;
+  color: #444;
 }
 
 .post-title-index,
