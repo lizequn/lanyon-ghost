@@ -1,9 +1,9 @@
 {{!< default}}
 
   {{#foreach posts}}
-  <article class="{{post_class}}">
+  <article class="{{post_class}} {{#linked_url}}link-post{{/linked_url}}">
       <header class="post-header">
-          <h1 class="post-title post-title-index"><a href="{{url}}">{{{title}}}</a></h1>
+          <h1 class="post-title post-title-index"><a href="{{url}}">{{{title}}}</a>{{#linked_url}} <span class="linkarrow">→</span>{{/linked_url}}</h1>
           <section class="post-meta">
               <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
           </section>

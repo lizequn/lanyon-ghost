@@ -5,7 +5,15 @@
 {{#post}}
 
   <header class="post-header">
-      <h1 class="post-title">{{title}}</h1>
+      <h1 class="post-title">
+        {{#linked_url}}
+          <a href="{{link}}">
+        {{/linked_url}}
+        {{title}}
+        {{#linked_url}}
+          </a> <span class="linkarrow">→</span>
+        {{/linked_url}}
+      </h1>
       <section class="post-meta">
           <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
       </section>
