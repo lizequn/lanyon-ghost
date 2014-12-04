@@ -44,6 +44,15 @@ a.blog-title {
   border-bottom: none;
 }
 
+.author-link a,
+.subscribe a {
+  border-bottom: none;
+  font-style: normal;
+}
+
+.subscribe {
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat','Helvetica','Avenir','Arial', sans-serif;
   font-weight: 500;
