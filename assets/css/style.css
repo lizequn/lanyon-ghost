@@ -5,6 +5,10 @@ p, ul, li {
   color: #4d4d4d;
 }
 
+p.align-center {
+  text-align: center;
+}
+
 html {
   font-family: 'Avenir','Helvetica','Avenir','Arial', sans-serif;
 }
