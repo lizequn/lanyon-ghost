@@ -79,9 +79,15 @@
       ga('send', 'pageview');
     </script>
 
-
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script>
+      $(document).ready(function(){
+        // Target your .container, .wrapper, .post, etc.
+        $("body").fitVids()
+      });
+    </script>
   </body>
 </html>
