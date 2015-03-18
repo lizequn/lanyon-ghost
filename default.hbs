@@ -31,8 +31,22 @@
   </head>
 
   <body class="{{body_class}} sidebar-overlay">
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
 
-    {{navigation}}
+    <!-- Toggleable sidebar -->
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-item">
+        <p>{{@blog.description}}</p>
+      </div>
+    
+      {{navigation}}
+      <div class="sidebar-item">
+        <p>
+          &copy; {{date format="YYYY"}}. All rights reserved.
+        </p>
+      </div>
+    </div>
+    
 
     <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
          content to avoid any CSS collisions with our real content. -->
