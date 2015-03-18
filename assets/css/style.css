@@ -123,12 +123,12 @@ blockquote p {
 a.sidebar-nav-item:hover,
 .sidebar-toggle:active,
 #sidebar-checkbox:checked ~ .sidebar-toggle {
-  background-color: #d28445;
+  background-color: #000000;
 }
 .masthead-title a,
 .sidebar-toggle,
 .related-posts li a:hover {
-  color: #d28445;
+  color: #000000;
 }
 .social{
   width: 90%;
