@@ -11,38 +11,13 @@
   </div>
 
   <nav class="sidebar-nav">
-    <a class="sidebar-nav-item" href="{{@blog.url}}">Home</a>
-    <a class="sidebar-nav-item" href="{{@blog.url}}/about">About {{ @blog.email }}</a>
-
-    {{! The code below dynamically generates a sidebar nav of posts tagged as static pages. }}
-    {{#foreach posts}}
-      {{#has tag="page"}}
-        <a class="sidebar-nav-item" href="{{ url }}">{{ title }}</a>
-      {{/has}}
-    {{/foreach}}
+    <!--<a class="sidebar-nav-item" href="{{@blog.url}}">Home</a>-->
+   
+     {{#foreach navigation}}
+            <a class="sidebar-nav-item" href="{{url absolute="true"}}">{{label}}</a>
+     {{/foreach}}
+   
   </nav>
-
-  <div class = "sidebar-item">
-    <div class = "social">
-      <ul>
-        <li>
-          <a class="btn btn-social-icon btn-twitter-transparent" href="http://twitter.com/_ArnavKumar">
-            <i class="fa fa-twitter"></i>
-          </a>
-        </li>
-        <li>
-          <a class="btn btn-social-icon btn-github-transparent" href="http://github.com/radzinzki">
-            <i class="fa fa-github"></i>
-          </a>
-        </li>
-        <li>
-          <a class="btn btn-social-icon btn-linkedin-transparent" href="http://www.linkedin.com/in/arnavkumar24">
-            <i class="fa fa-linkedin"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
   <div class="sidebar-item">
     <p>
       &copy; {{date format="YYYY"}}. All rights reserved.
