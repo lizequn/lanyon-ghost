@@ -15,8 +15,10 @@
         {{/linked_url}}
       </h1>
       <section class="post-meta">
-          <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
-      </section>
+          {{#author}}
+          {{name}}--
+          {{/author}}
+          <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}      </section>
   </header>
 
   <section class="post-content">
@@ -25,29 +27,7 @@
 
   <footer class="post-footer">
 
-  {{! Everything inside the #author tags pulls data from the author }}
-  {{#author}}
-
-      {{#if image}}
-      <figure class="author-image">
-          <a class="img" href="{{url}}" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></a>
-      </figure>
-      {{/if}}
-
-      <section class="author">
-          <h4><a href="{{blog.url}}/about">{{name}}</a></h4>
-
-          {{#if bio}}
-              <p>{{bio}}</p>
-          {{/if}}
-          <div class="author-meta">
-              {{#if location}}<p><span class="author-location">{{location}}</span><p>{{/if}}
-              {{#if website}}<span class="author-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
-              <span class="subscribe"><a href="{{blog.url}}/feed"><i class="fa fa-rss-square"></i> Subscribe</a></span>
-          </div>
-      </section>
-
-  {{/author}}
+  
 
   </footer>
 
